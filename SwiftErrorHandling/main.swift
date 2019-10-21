@@ -14,6 +14,8 @@ print(f1.facultyName)
     try f1.SetValueSalary(updateSalary: 2000)
     
     print(f1.Salary)
+    
+    try f1.SetFacultyNam(name: "Karan")
 }
 catch FacultyError.invalidEmployeeId(let facultyId)
 {

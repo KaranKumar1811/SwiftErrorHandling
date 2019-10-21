@@ -47,6 +47,22 @@ init(facultyId:Int, facultyName: String, Salary:Double)throws
        
     }
     
+    func SetFacultyNam(name: String) throws {
+        do{
+            if name.count<10
+            {
+                throw FacultyError.invalidEmployeeName(facultyName: name)
+            }
+            self.facultyName=name
+            
+        }
+            catch FacultyError.invalidEmployeeName(let facultyName)
+            {
+                print("Inavlid Update Name : \(facultyName)")
+            }
+        
+        }
+    }
     
     
-}
+
